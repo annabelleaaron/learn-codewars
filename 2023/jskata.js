@@ -1,3 +1,18 @@
+// CONVERT BOOLEAN VALUES TO STRINGS 'YES' OR 'NO'
+function boolToWord( bool ){ // ternary operator
+  return bool ? 'Yes':'No'; // (condition) ? run this code : run this code instead
+}
+// my solution
+function boolToWord( bool ){
+  if (bool === true) {
+    return "Yes"
+  }
+  else {
+    return "No"
+  }
+}
+
+
 // SUM ARRAYS
 function sum(numbers) { // js function .reduce() - return the sum of all the elements in the array
     return numbers.reduce((a, b) => a + b, 0);
@@ -25,3 +40,23 @@ var stringToNumber = function(str){
 var stringToNumber = function(str){
   return +str; // if the operand is not a number, converts it into a number. similar to Number()
 } // numeric conversion - unary
+
+
+// COUNTING SHEEP
+function countSheeps(arrayOfSheeps) {
+  return arrayOfSheeps.filter(Boolean).length; 
+} // filter() method creates a new array with all elements that pass the test implemented by the provided function - Boolean function. when an element is passed to the Boolean function, it returns true for truthy values and false for falsy values - true values will pass the test while false, null and undefined values will not pass the test. eg. [true, false, null, undefined] will become [true]. the length property returns the number of elements in the array.
+// my solution
+function countSheeps(sheep) {
+  let s = 0
+  for(let i = 0; i <= sheep.length; i++) {
+    if (sheep[i] == true) {
+      s += 1
+    }
+    else {
+      s += 0
+    }
+  }
+  return s
+}
+
