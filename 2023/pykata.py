@@ -43,3 +43,11 @@ def count_sheeps(sheep):
             s += 0
     return s
 
+
+# GRASSHOPPER - SUMMATION
+def summation(num): # range does not support float/string data type, only integer
+    return sum(range(1, num + 1)) # range(start(default 0), stop(stops before this number), step(increment)) - returns a sequence of numbers
+# eg. range(1, 8 + 1) will return range(1, 9) then sum() method will add all numbers in range(1, 9)
+# my solution
+def summation(num):
+    return num * (num + 1) / 2

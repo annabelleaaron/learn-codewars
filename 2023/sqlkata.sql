@@ -1,11 +1,16 @@
 -- CONVERT BOOLEAN VALUES TO STRINGS 'YES' OR 'NO'
-SELECT bool, 
-       CASE 
-           WHEN bool THEN 'Yes'
-           ELSE           'No' 
-       END AS res 
-FROM booltoword
+select bool,
+    case -- use case when there is more than one condition
+        when bool then 'Yes'
+        else 'No'
+    end as res
+from booltoword
 
 -- SUM ARRAYS
 
 -- COUNTING SHEEP
+
+
+
+-- GRASSHOPPER - SUMMATION
+select n, n * (n + 1) / 2 as res from kata

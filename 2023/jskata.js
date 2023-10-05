@@ -60,3 +60,17 @@ function countSheeps(sheep) {
   return s
 }
 
+
+// GRASSHOPPER - SUMMATION
+const summation = n => n * (n + 1) / 2;
+// eg. 8 * (8 + 1) / 2 | 36 is (1+2+3+4+5+6+7+8)
+// my solution
+var summation = function (num) {
+  let s = 0
+  for(let i = 1; i <= num; i ++) {
+    s += i
+  }
+  return s
+}
+
+
