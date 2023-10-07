@@ -51,3 +51,11 @@ def summation(num): # range does not support float/string data type, only intege
 # my solution
 def summation(num):
     return num * (num + 1) / 2
+
+
+# REVERSED STRINGS
+# my solution
+def solution(string):
+    return string[::-1] # [::] is slice notation/slicing - use a slice that steps backwards, -1
+# eg. b = "Hello, World!" | print(b[2:5]) -> 'llo' - start from 0, only takes the string up until before the 5th character
+# b = "Hello, World!" | print(b[-5:-2]) -> 'orl' - count backwards start from 1, not 0. but takes the string from left to right

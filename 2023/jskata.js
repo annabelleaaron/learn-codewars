@@ -74,3 +74,15 @@ var summation = function (num) {
 }
 
 
+// REVERSED STRINGS
+function solution(str){
+  return str.split('').reverse().join('');  
+} // eg. 'world'.split('') -> ['w', 'o', 'r', 'l', 'd'].reverse() -> ['d', 'l', 'r', 'o', 'w'].join('') -> 'dlrow'
+// my solution
+function solution(str){
+  let s = ''
+  for(let i = str.length-1; i >= 0; i--) {
+    s += str[i]
+  }
+  return s
+}
