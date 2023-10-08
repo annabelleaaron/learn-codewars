@@ -86,3 +86,13 @@ function solution(str){
   }
   return s
 }
+
+
+// OPPOSITES ATTRACT
+function lovefunc(flower1, flower2){
+  return flower1 % 2 !== flower2 % 2;
+}
+// my solution
+function lovefunc(flower1, flower2){
+  return flower1 % 2 != flower2 % 2 ? true : false;
+}
