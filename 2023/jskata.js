@@ -96,3 +96,10 @@ function lovefunc(flower1, flower2){
 function lovefunc(flower1, flower2){
   return flower1 % 2 != flower2 % 2 ? true : false;
 }
+
+
+// REMOVE FIRST AND LAST CHARACTER
+// my solution
+function removeChar(str) {
+  return str.slice(1, -1);
+}

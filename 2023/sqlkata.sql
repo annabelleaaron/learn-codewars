@@ -27,3 +27,6 @@ select flower1, flower2,
         else false
     end as res
 from love
+
+-- REMOVE FIRST AND LAST CHARACTER
+select s, substring(s, 1, length(s) - 2) as res from removechar

@@ -65,3 +65,12 @@ def solution(string):
 # my solution
 def lovefunc( flower1, flower2 ):
     return flower1 % 2 != flower2 % 2
+
+
+# REMOVE FIRST AND LAST CHARACTER
+# my solution
+def remove_char(s):
+    return s[1 : -1]
+# indexes range -len(x) to (len(x) - 1)
+# [0, 1, 2, 3, 4] == [-5, -4, -3, -2, -1] <- the values equal to the index of the same element
+# the length of each of these lists is 5, and the values in the first list and the second list differ by exactly 5
