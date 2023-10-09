@@ -74,3 +74,17 @@ def remove_char(s):
 # indexes range -len(x) to (len(x) - 1)
 # [0, 1, 2, 3, 4] == [-5, -4, -3, -2, -1] <- the values equal to the index of the same element
 # the length of each of these lists is 5, and the values in the first list and the second list differ by exactly 5
+
+
+# FAKE BINARY
+def fake_bin(x):
+    return ''.join('0' if c < '5' else '1' for c in x)
+# my solution
+def fake_bin(x):
+    n = ''
+    for s in x:
+        if int(s) >= 5:
+            n += '1'
+        else:
+            n += '0'
+    return n

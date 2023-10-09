@@ -103,3 +103,24 @@ function lovefunc(flower1, flower2){
 function removeChar(str) {
   return str.slice(1, -1);
 }
+
+
+// FAKE BINARY
+function fakeBin(x) { 
+  return x.split('').map(n => n < 5 ? 0 : 1).join('');
+} // map() - creates a new array populated with the results of calling a provided function on every element in the calling array
+// regex
+function fakeBin(x) {
+  return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+} // /\d/g is same as /[0-9]/g - it matches all digit characters (0-9)
+function fakeBin(x){
+  return x.replace( /[0-4]/g, "0" ).replace( /[5-9]/g, "1" )
+} // [0-4] is set of individual characters '0', '1', '2', '3', '4' - same with [5-9]
+// replace() - returns a new string with one, some, or all matches of a pattern replaced by a replacement
+// when the string is passed in the function, replace() processes each character in the string
+// my solution
+function fakeBin(x){
+  return x.split('').flatMap((char) =>
+                              char >= 5 ? '1' : '0').join('')
+} // flatMap() - returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. identical to a map() followed by a flat() of depth 1 (arr.map(...args).flat()), but slightly more efficient than calling those two methods separately.
+// flat () - creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. eg. arr1 = [0, 1, 2, [3, 4]] -> console.log(arr1.flat()) -> Array [0, 1, 2, 3, 4]

@@ -28,5 +28,15 @@ select flower1, flower2,
     end as res
 from love
 
+
 -- REMOVE FIRST AND LAST CHARACTER
 select s, substring(s, 1, length(s) - 2) as res from removechar
+
+
+-- FAKE BINARY
+select x, translate(x, '123456789', '000011111') as res from fakebin
+select x, regexp_replace(regexp_replace(x, '[0-4]', '0', 'g'), '[5-9]', '1', 'g') as res from fakebin
+-- my solution, definitely not a solution
+select x, replace(replace(replace(replace(replace(replace(replace(replace(replace(x, '1', '0'), '2', '0'), '3', '0'), '4', '0'), '5', '1'), '6', '1'), '7', '1'), '8', '1'), '9', '1') as res from fakebin
+
+
