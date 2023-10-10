@@ -88,3 +88,14 @@ def fake_bin(x):
         else:
             n += '0'
     return n
+
+
+# KEEP HYDRATED!
+def litres(time):
+    return time // 2 # floor division (//) rounds the result down to the nearest whole number
+# my solution
+import math
+def litres(time):
+    return math.floor(time * 0.5)
+
+

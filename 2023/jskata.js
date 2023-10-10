@@ -124,3 +124,13 @@ function fakeBin(x){
                               char >= 5 ? '1' : '0').join('')
 } // flatMap() - returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. identical to a map() followed by a flat() of depth 1 (arr.map(...args).flat()), but slightly more efficient than calling those two methods separately.
 // flat () - creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. eg. arr1 = [0, 1, 2, [3, 4]] -> console.log(arr1.flat()) -> Array [0, 1, 2, 3, 4]
+
+
+// KEEP HYDRATED!
+const litres = time => Math.floor(time * 0.5) // arrow function
+// my solution
+function litres(time) {
+  return Math.floor(time * 0.5)
+}
+
+

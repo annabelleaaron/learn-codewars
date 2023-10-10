@@ -40,3 +40,7 @@ select x, regexp_replace(regexp_replace(x, '[0-4]', '0', 'g'), '[5-9]', '1', 'g'
 select x, replace(replace(replace(replace(replace(replace(replace(replace(replace(x, '1', '0'), '2', '0'), '3', '0'), '4', '0'), '5', '1'), '6', '1'), '7', '1'), '8', '1'), '9', '1') as res from fakebin
 
 
+-- KEEP HYDRATED!
+select *, floor(hours * 0.5) as liters from cycling
+
+
