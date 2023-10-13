@@ -44,3 +44,7 @@ select x, replace(replace(replace(replace(replace(replace(replace(replace(replac
 select *, floor(hours * 0.5) as liters from cycling
 
 
+-- GRASSHOPPER - MESSI GOALS FUNCTION
+select (la_liga_goals + copa_del_rey_goals + champions_league_goals) as res from goals
+
+

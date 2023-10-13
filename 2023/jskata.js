@@ -134,3 +134,18 @@ function litres(time) {
 }
 
 
+// GET THE MIDDLE CHARACTER
+function getMiddle(s){
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+} // subtr(start index, how many characters)
+// eg. 'test' -> substr(Math.ceil(4/2-1), 4%2 === 0 ? 2 : 1) -> substr(Math.ceil(2-1), 2) -> substr(1, 2)
+function getMiddle(s){
+  return s.slice((s.length-1)/2, s.length/2+1);
+} // slice(starting character, character index after the required character)
+// eg. 'test' -> slice((4-1)/2, 4/2+1) -> slice(3/2, 2+1) -> slice(1.5, 3) -> slice(1, 3)
+// my solution
+function getMiddle(s){
+  return s.length % 2 == 1 ? s.slice(s.length/2, s.length/2 + 1) : s.slice(s.length/2 - 1, s.length/2 + 1)
+}
+
+

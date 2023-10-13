@@ -99,3 +99,16 @@ def litres(time):
     return math.floor(time * 0.5)
 
 
+# GET THE MIDDLE CHARACTER
+def get_middle(s):
+    index, odd = divmod(len(s), 2)
+    return s[index] if odd else s[index - 1:index + 1]
+# my solution
+import math
+def get_middle(s):
+    return s[math.floor(len(s)/2)] if len(s) % 2 == 1 else s[math.floor(len(s)/2-1):math.floor(len(s)/2)+1]
+# without import math
+def get_middle(s):
+    return s[int(len(s)/2)] if len(s) % 2 == 1 else s[int(len(s)/2-1):int(len(s)/2)+1]
+
+
