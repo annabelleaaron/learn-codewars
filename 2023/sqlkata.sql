@@ -48,3 +48,11 @@ select *, floor(hours * 0.5) as liters from cycling
 select (la_liga_goals + copa_del_rey_goals + champions_league_goals) as res from goals
 
 
+-- EVEN OR ODD
+select number,
+  case
+    when number%2 = 0 then 'Even'
+    else 'Odd'
+  end as is_even
+from numbers
+

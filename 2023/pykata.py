@@ -112,3 +112,14 @@ def get_middle(s):
     return s[int(len(s)/2)] if len(s) % 2 == 1 else s[int(len(s)/2-1):int(len(s)/2)+1]
 
 
+# SUM OF THE FIRST NTH TERM OF SERIES
+def series_sum(n):
+    return '{:.2f}'.format(sum(1/(3 * i + 1) for i in range(n)))
+# my solution
+def series_sum(n):
+    sum = 0
+    for i in range(n):
+        sum += 1 / (1 + 3 * i)
+    return "{:.2f}".format(sum)
+
+
