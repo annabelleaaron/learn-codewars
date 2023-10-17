@@ -123,3 +123,8 @@ def series_sum(n):
     return "{:.2f}".format(sum)
 
 
+# SENTENCE SMASH
+# my solution
+def smash(words):
+    return ' '.join(words)
+

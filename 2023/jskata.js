@@ -149,7 +149,6 @@ function getMiddle(s){
 }
 
 
-
 // SUM OF THE FIRST NTH TERM OF SERIES
 // my solution
 function SeriesSum(n){
@@ -159,4 +158,12 @@ function SeriesSum(n){
   }
   return sum.toFixed(2)
 }
+
+
+// SENTENCE SMASH
+const smash = words => words.join(' ');
+// my solution
+function smash (words) {
+  return words.toString().split(',').join(' ')
+};
 

@@ -56,3 +56,7 @@ select number,
   end as is_even
 from numbers
 
+
+-- GRASSHOPPER - TERMINAL GAME MOVE FUNCTION
+select (position + roll + roll) as res from moves
+
