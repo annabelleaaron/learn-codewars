@@ -167,3 +167,24 @@ function smash (words) {
   return words.toString().split(',').join(' ')
 };
 
+
+// GROWTH OF A POPULATION
+const nbYear = (p0, percent, aug, p) => // recursive + arrow function and ternary operator
+  p0 < p ? true + nbYear(p0 + p0 * percent / 100 + aug | 0, percent, aug, p) : false
+// Recursive function: exit condition p0 >= p
+function nbYear(p0, percent, aug, p) {
+  p0 =  Math.floor(p0*(1+percent/100)+aug)
+  if (p0>=p)
+     return 1
+  return nbYear(p0,percent,aug,p)+1
+}
+// my solution
+function nbYear(p0, percent, aug, p) {
+  let n = 0
+  for (let i = p0; i < p; n++) {
+    i += Math.trunc(i * (percent/100) + aug) // Math.trunc() completely strips the decimal
+  }
+  return n
+}
+
+

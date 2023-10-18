@@ -60,3 +60,10 @@ from numbers
 -- GRASSHOPPER - TERMINAL GAME MOVE FUNCTION
 select (position + roll + roll) as res from moves
 
+
+-- SQL BASICS: SIMPLE WHERE AND ORDER BY
+select * from people
+where age > 50
+order by age desc
+
+
