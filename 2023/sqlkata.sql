@@ -67,3 +67,8 @@ where age > 50
 order by age desc
 
 
+-- DISEMVOWEL TROLLS
+select str, regexp_replace(str, '[aeiou]', '', 'ig') res from disemvowel
+-- my solution
+select str, translate(str, 'aeiouAEIOU', '') as res from disemvowel
+

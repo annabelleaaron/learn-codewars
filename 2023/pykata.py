@@ -131,6 +131,7 @@ def smash(words):
 
 # GROWTH OF A POPULATION
 # recursive function
+######################## take note
 def nb_year(p0, percent, aug, p, i=0):
     return i if p0>=p else nb_year(int(p0+p0*(percent/100)+aug), percent, aug, p, i+1)
 # my solution
@@ -140,5 +141,36 @@ def nb_year(p0, percent, aug, p):
         p0 += int(p0 * (percent/100) + aug)
         n += 1
     return n
+
+
+# MUMBLING
+def accum(s):
+    return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
+# my solution
+def accum(s):
+    text = ''
+    for i in range(len(s)):
+        j = 0
+        while (j <= i):
+            if j == 0:
+                text += s[i].capitalize()
+            else:
+                text += s[i].lower()
+            j += 1
+        if i < len(s)-1:
+            text += '-'
+    return text
+
+
+# DISEMVOWELING TROLLS
+def disemvowel(string):
+    return string.translate({ord(i):None for i in 'aeiouAEIOU'})
+def disemvowel(string):
+    return "".join(c for c in string if c.lower() not in "aeiou")
+# my solution
+def disemvowel(string_):
+    return string_.translate(str.maketrans('', '', 'aeiouAEIOU'))
+
+
 
 

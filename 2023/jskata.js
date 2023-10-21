@@ -169,6 +169,7 @@ function smash (words) {
 
 
 // GROWTH OF A POPULATION
+///////////////////////// take note
 const nbYear = (p0, percent, aug, p) => // recursive + arrow function and ternary operator
   p0 < p ? true + nbYear(p0 + p0 * percent / 100 + aug | 0, percent, aug, p) : false
 // Recursive function: exit condition p0 >= p
@@ -186,5 +187,48 @@ function nbYear(p0, percent, aug, p) {
   }
   return n
 }
+
+
+// MUMBLING
+function accum(s) {
+	return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+} // view notes
+function accum(s) {
+	return s.split('').map((x,index) => x.toUpperCase()+Array(index+1).join(x.toLowerCase())).join('-');
+}
+function accum(str) {
+	var letters = str.split('');
+  var result = [];
+  for (var i = 0; i < letters.length; i++) {
+    result.push(letters[i].toUpperCase() + Array(i + 1).join(letters[i].toLowerCase()));
+  }
+  return result.join('-');
+}
+// my solution
+function accum(s) {
+  let text = '', j = 0;
+  [...s].forEach(c => {
+                 for(let i = 0; i <= j; i++) {
+                   i == 0 ? text += c.toUpperCase() : text += c.toLowerCase(); 
+                   console.log(text)
+                  }
+                  j += 1
+                  if (j < s.length) {
+                    text += '-'
+                  }
+                })
+  return text
+}
+
+
+// DISEMVOWEL TROLLS
+function test(str) {
+  return (str || "").replace(/[aeiou]/gi, '')
+}
+// my solution
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
 
 
