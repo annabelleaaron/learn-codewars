@@ -244,4 +244,10 @@ function filter_list(l) {
 }
 
 
+// FRIEND OR FOE
+// my solution
+function friend(friends){
+  return friends.filter(f => f.length === 4)
+}
+
 

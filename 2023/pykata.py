@@ -181,4 +181,11 @@ def filter_list(l):
 # isinstance() is faster but if the list contains a boolean value, it will be converted to a 0 or 1 and will be considered an integer (True)
 
 
+# FRIEND OR FOE
+def friend(x):
+    return filter(lambda name: len(name) == 4, x)
+# my solution
+def friend(x):
+    return [f for f in x if len(f) == 4]
+
 
