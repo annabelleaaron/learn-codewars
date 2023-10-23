@@ -172,5 +172,13 @@ def disemvowel(string_):
     return string_.translate(str.maketrans('', '', 'aeiouAEIOU'))
 
 
+# LIST FILTERING
+# my solution
+def filter_list(l):
+    return [x for x in l if type(x) is int]
+def filter_list(l):
+    return [x for x in l if isinstance(x, int)]
+# isinstance() is faster but if the list contains a boolean value, it will be converted to a 0 or 1 and will be considered an integer (True)
+
 
 

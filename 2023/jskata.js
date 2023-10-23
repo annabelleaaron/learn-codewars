@@ -231,4 +231,17 @@ function disemvowel(str) {
 }
 
 
+// LIST FILTERING
+function filter_list(l) {
+  return l.filter(Number.isInteger);
+}
+function filter_list(l) {
+  return l.filter(v => typeof v == "number")
+}
+// my solution
+function filter_list(l) {
+  return l.filter(Number.isFinite)
+}
+
+
 

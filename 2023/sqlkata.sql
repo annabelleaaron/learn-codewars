@@ -72,3 +72,12 @@ select str, regexp_replace(str, '[aeiou]', '', 'ig') res from disemvowel
 -- my solution
 select str, translate(str, 'aeiouAEIOU', '') as res from disemvowel
 
+-- SQL BASICS: SIMPLE JOIN AND COUNT
+select p.id, p.name, count(t.id) as toy_count
+from people as p
+left join toys as t on p.id = t.people_id
+group by p.id
+
+
+
+
