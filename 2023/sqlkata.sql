@@ -84,3 +84,9 @@ group by p.id
 select project, commits, contributors, regexp_replace(address, '[0-9]', '!', 'g') as address from repositories
 
 
+-- STRANGE PRINCIPAL
+select n, floor(sqrt(n))::integer as res from numofopenlockers
+
+
+
+

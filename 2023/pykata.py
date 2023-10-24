@@ -189,3 +189,13 @@ def friend(x):
     return [f for f in x if len(f) == 4]
 
 
+# NUMBER OF PEOPLE IN THE BUS
+def number(bus_stops):
+    return sum(on - off for on, off in bus_stops)
+# my solution
+def number(bus_stops):
+    return sum(p[0]-p[1] for p in bus_stops)
+
+
+
+

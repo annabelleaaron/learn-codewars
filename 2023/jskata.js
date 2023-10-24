@@ -251,3 +251,12 @@ function friend(friends){
 }
 
 
+// NUMBER OF PEOPLE IN THE BUS
+const number = busStops => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+// my solution
+var number = function(busStops){
+  return busStops.map((p) => (p[0] - p[1])).reduce((a,b) => a + b, 0)
+}
+
+
+
