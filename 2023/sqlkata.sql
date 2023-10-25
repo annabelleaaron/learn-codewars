@@ -88,5 +88,13 @@ select project, commits, contributors, regexp_replace(address, '[0-9]', '!', 'g'
 select n, floor(sqrt(n))::integer as res from numofopenlockers
 
 
+-- EASY SQL: MOVING VALUES
+select 
+  length(name) as id, 
+  length(legs::text) as name, 
+  length(arms::text) as legs, 
+  length(characteristics) as arms, 
+  length(id::text) as characteristics 
+from monsters
 
 

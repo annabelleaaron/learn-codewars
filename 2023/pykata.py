@@ -197,5 +197,12 @@ def number(bus_stops):
     return sum(p[0]-p[1] for p in bus_stops)
 
 
+# TESTING 1-2-3
+def number(lines):
+  return ['%d: %s' % v for v in enumerate(lines, 1)]
+# my solution
+def number(lines):
+    return [f'{i + 1}: {s}' for i, s in enumerate(lines)]
+
 
 

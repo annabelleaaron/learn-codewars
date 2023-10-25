@@ -259,4 +259,15 @@ var number = function(busStops){
 }
 
 
+// Testing 1-2-3
+const number = array => array.map((s, n) => `${n + 1}: ${s}`)
+// my solution
+var number=function(array){
+  return array.map((s, n) => (n + 1) + ': ' + s)
+}
+const number = array => array.map((s, n) => (n + 1) + ': ' + s)
+
+
+
+
 
