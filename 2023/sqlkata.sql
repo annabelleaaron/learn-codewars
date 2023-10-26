@@ -98,3 +98,5 @@ select
 from monsters
 
 
+-- SQL BASICS: RAISE TO THE POWER
+select power(number1, number2) as result from decimals

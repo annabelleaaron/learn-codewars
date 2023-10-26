@@ -205,4 +205,20 @@ def number(lines):
     return [f'{i + 1}: {s}' for i, s in enumerate(lines)]
 
 
+# REVERSE WORDS
+# regex
+import re
+def reverse_words(str):
+  return re.sub(r'\S+', lambda w: w.group(0)[::-1], str)
+# map
+def reverse_words(str):
+  return " ".join(map(lambda word: word[::-1], str.split(' ')))
+# x[::-1] reverses a string
+# my solution
+def reverse_words(text):
+    return ' '.join(x[::-1] for x in text.split(' '))
+
+
+
+
 
