@@ -219,6 +219,13 @@ def reverse_words(text):
     return ' '.join(x[::-1] for x in text.split(' '))
 
 
+# ISOGRAMS
+
+# my solution
+def is_isogram(string):
+    return len(set((string.lower()))) == len(string)
+
+
 
 
 

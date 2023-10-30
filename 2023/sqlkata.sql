@@ -100,3 +100,11 @@ from monsters
 
 -- SQL BASICS: RAISE TO THE POWER
 select power(number1, number2) as result from decimals
+
+
+-- THIRD ANGLE OF A TRIANGLE
+select a, b, (180-a-b) as res from otherangle
+
+
+
+

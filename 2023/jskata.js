@@ -276,6 +276,22 @@ function reverseWords(str) {
 }
 
 
+// ISOGRAMS
+// set
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}
+// regex
+function isIsogram(str){ 
+  return !/(\w).*\1/i.test(str)
+}
+// my solution
+function isIsogram(str){
+  return [...str.toLowerCase()].sort().map((s, i, a) => a[i] == a[i+1] ? 'same' : 'not same').every((x) => x == 'not same')
+}
+
+
+
 
 
 
