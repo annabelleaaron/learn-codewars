@@ -226,6 +226,12 @@ def is_isogram(string):
     return len(set((string.lower()))) == len(string)
 
 
-
+# YOU'RE A SQUARE!
+def is_square(n):    
+    return n >= 0 and (n**0.5) % 1 == 0
+# my solution
+import math
+def is_square(n):    
+    return math.sqrt(n) % 1 == 0 if n >= 0 else False # return n > -1 and math.sqrt(n) % 1 == 0
 
 

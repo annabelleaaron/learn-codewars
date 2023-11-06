@@ -291,8 +291,14 @@ function isIsogram(str){
 }
 
 
-
-
+// YOU'RE A SQUARE!
+function isSquare(n) { // using division
+  return Math.sqrt(n) % 1 === 0;
+}
+// my solution
+var isSquare = function(n){ // using minus
+  return n >= 0 ? (n != 0 ? (Math.sqrt(n) - Math.floor(Math.sqrt(n)) == 0  ? true : false) : true ) : false
+}
 
 
 

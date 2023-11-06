@@ -106,5 +106,11 @@ select power(number1, number2) as result from decimals
 select a, b, (180-a-b) as res from otherangle
 
 
+-- REGEX STRING TO TABLE
+select regexp_split_to_table(text, E'[aeiou]') as results from random_string
+
+
+
+
 
 
