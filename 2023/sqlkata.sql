@@ -110,7 +110,12 @@ select a, b, (180-a-b) as res from otherangle
 select regexp_split_to_table(text, E'[aeiou]') as results from random_string
 
 
-
+-- SQL WITH SAILOR MOON: THINKING ABOUT JOINS...
+select s.senshi_name as sailor_senshi, s.real_name_jpn as real_name, ct.name as cat, sc.school as school
+from sailorsenshi as s
+left join cats as ct on ct.id = s.cat_id
+left join schools as sc on sc.id = s.school_id
+-- join only displays rows that have values, left join includes rows with no values
 
 
 

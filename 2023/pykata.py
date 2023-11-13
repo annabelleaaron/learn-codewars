@@ -235,3 +235,29 @@ def is_square(n):
     return math.sqrt(n) % 1 == 0 if n >= 0 else False # return n > -1 and math.sqrt(n) % 1 == 0
 
 
+# COUNT THE DIVISORS OF A NUMBER
+def divisors(n): # not efficient
+    return  len([l_div for l_div in range(1, n + 1) if n % l_div == 0])
+def divisors(n): # not efficient
+    return sum(n%i==0 for i in range(1,n+1))
+# my solution
+def divisors(n):
+    divs = 1
+    factor = 2
+    
+    while factor * factor <= n:
+        exponent = 0
+        while n % factor == 0:
+            n /= factor
+            exponent += 1
+        factor = 3 if factor == 2 else factor + 2
+        divs *= exponent + 1
+    
+    if n > 1:
+        divs *= 2
+        
+    return divs
+
+
+
+

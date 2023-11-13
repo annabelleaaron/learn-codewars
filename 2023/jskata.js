@@ -301,4 +301,42 @@ var isSquare = function(n){ // using minus
 }
 
 
+// COUNT THE DIVISORS OF A NUMBER
+function getDivisorsCnt(n){
+  var num=0;
+  if(n==1) return 1;
+  if(n%Math.sqrt(n)==0) num++;
+  for(var i=1;i<Math.sqrt(n);i++){
+      if(n%i==0){
+          num+=2;
+      }
+  }
+  return num;
+}
+// my solution (not really)
+function getDivisorsCnt(n){
+  var numOfDivisors = 1
+  var factor = 2
+  
+  while (factor * factor <= n) {
+    if (n % factor === 0) {
+      var exponent = 0
+      do {
+        n /= factor
+        exponent++
+      } while (n % factor === 0)
+      numOfDivisors *= exponent + 1
+    }
+    factor = factor == 2 ? 3 : factor + 2
+  }
+  if (n > 1) {
+    numOfDivisors *= 2
+  }
+  return numOfDivisors
+}
+
+
+
+
+
 
